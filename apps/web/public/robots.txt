@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kaveritech.co.in/sitemap.xml

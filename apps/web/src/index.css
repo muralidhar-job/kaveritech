@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  overflow-x: clip;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* Accounts for fixed header */
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    
+    /* Tech Blue */
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Light Slate */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+    
+    /* Deep Blue Accent */
+    --accent: 224 76% 48%;
+    --accent-foreground: 0 0% 100%;
+    
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 221 83% 53%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --radius: 0.75rem;
+
+    /* Technology Section Specific Tokens */
+    --tech-card-bg: 0 0% 100%;
+    --tech-card-border: 214 32% 91%;
+    --tech-badge-ai: 262 83% 58%;
+    --tech-badge-java: 24 98% 50%;
+    --tech-badge-test: 142 71% 45%;
+    --tech-badge-react: 193 95% 68%;
+    --tech-badge-cloud: 217 91% 60%;
+
+    /* Services Section Vibrant Tokens */
+    --service-training: 16 100% 66%;     /* Coral/Orange */
+    --service-interviews: 189 94% 43%;   /* Teal/Cyan */
+    --service-debugging: 262 83% 58%;    /* Purple/Indigo */
+    --service-hackathons: 84 81% 44%;    /* Lime/Green */
+    --service-innovations: 348 83% 47%;  /* Crimson/Red */
+    --service-ai: 217 91% 60%;           /* Electric Blue */
+  }
+  
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 11%;
+    
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    
+    --accent: 224 76% 48%;
+    --accent-foreground: 0 0% 100%;
+    
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 217 91% 60%;
+    
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Technology Section Specific Tokens */
+    --tech-card-bg: 222 47% 11%;
+    --tech-card-border: 217 33% 17%;
+    --tech-badge-ai: 262 83% 68%;
+    --tech-badge-java: 24 98% 60%;
+    --tech-badge-test: 142 71% 55%;
+    --tech-badge-react: 193 95% 78%;
+    --tech-badge-cloud: 217 91% 70%;
+
+    /* Services Section Vibrant Tokens (Slightly adjusted for dark mode if needed, keeping vibrant) */
+    --service-training: 16 100% 66%;
+    --service-interviews: 189 94% 43%;
+    --service-debugging: 262 83% 68%;
+    --service-hackathons: 84 81% 54%;
+    --service-innovations: 348 83% 57%;
+    --service-ai: 217 91% 70%;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .section-padding {
+    @apply py-20 md:py-28;
+  }
+  
+  /* Technology Section Utilities */
+  .tech-card-hover {
+    @apply transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10 hover:border-primary/30;
+  }
+  
+  .tech-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+  }
+
+  .tech-image-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-90;
+  }
+
+  /* Services Section Utilities */
+  .service-card-hover {
+    @apply transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl;
+  }
+  
+  .service-gradient-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/20 opacity-90 transition-opacity duration-500 group-hover:opacity-95;
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}

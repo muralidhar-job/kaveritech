@@ -31,7 +31,7 @@ function Header() {
               <Cpu className="h-6 w-6 text-primary" />
             </div>
             <span className="text-2xl font-bold text-foreground tracking-tight">
-              Kaveri<span className="text-primary">Tech</span>
+              Kaveri<span className="text-primary">Technologies</span>
             </span>
           </a>
 

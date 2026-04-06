@@ -11,7 +11,7 @@ function Footer() {
             <a href="#home" className="flex items-center space-x-2">
               <Cpu className="h-6 w-6 text-primary" />
               <span className="text-2xl font-bold text-white tracking-tight">
-                Kaveri<span className="text-primary">Tech</span>
+                Kaveri<span className="text-primary">Technologies</span>
               </span>
             </a>
             <p className="mt-6 text-sm leading-relaxed text-slate-400">
@@ -116,7 +116,7 @@ function Footer() {
         <div className="mt-16 pt-8 border-t border-slate-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-slate-400">
-              © {new Date().getFullYear()} KaveriTech. All rights reserved.
+              © {new Date().getFullYear()} Kaveri Technologies pvt Ltd. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-sm text-slate-400 hover:text-primary transition-colors duration-200">
